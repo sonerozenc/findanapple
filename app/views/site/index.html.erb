@@ -1,3 +1,19 @@
 <div id="header_region"></div>
-<div id="main_region">Hi there!</div>
+<div id="main_region">
+	<h1>All users</h1>
+	<% unless @users.empty? %>
+		<ul class="user_listing">
+			<% @users.each do |user| %>
+				<li data-user-id="<%= user._id %>">
+					<img src="http://placecage.com/200/200" width="50" height="50" alt="Avatar " />
+					<h2><%= user.name %></h2>
+					<p><%= user.email %></p>
+				</li>
+			<% end %>
+		</ul>
+		<div class="modal" id="user-modal"></div>
+	<% else %>
+		<p>Add some users, please.</p>
+	<% end %>
+</div>
 <div id="footer_region"></div>

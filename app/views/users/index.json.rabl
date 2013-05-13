@@ -1,3 +1,3 @@
 collection @users
 
-extends "users/_base"
+attributes :id, :name, :email

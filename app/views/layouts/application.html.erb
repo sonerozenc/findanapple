@@ -12,7 +12,9 @@
     <%= stylesheet_link_tag "application", :media => "all" %>
   </head>
   <body>
-    <%= yield %>
+    <div id = 'page'>
+      <%= yield %>
+    </div>
     
     <%= javascript_include_tag "application" %>
     <%= javascript_include_tag "backbone/app" %>
